@@ -1,5 +1,8 @@
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 from album_ratings.config import DevelopmentConfig
+
+db = SQLAlchemy()
 
 def create_app():
 
@@ -9,5 +12,8 @@ def create_app():
 
     from album_ratings.main.routes import main
     app.register_blueprint(main)
+
+    from album_ratings.albums.routes import albums
+    app.register_blueprint(albums)
 
     return app
