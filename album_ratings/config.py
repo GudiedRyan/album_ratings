@@ -1,2 +1,2 @@
 class DevelopmentConfig:
-    pass
+    SECRET_KEY = "I'm going to change this"
