@@ -1,6 +1,22 @@
 {% extends 'layout.html' %}
 {% block content %}
-<div>
-    Hello
-</div>
+    <h1>Album Review</h1>
+    <table>
+        <thead>
+            <tr>
+                <td>Album</td>
+                <td>Artist</td>
+                <td>Release Year</td>
+                <td>Rating</td>
+            </tr>
+        </thead>
+        {% for album in albums %}
+            <tr>
+                <td>{{ album.name }}</td>
+                <td>{{ album.artist }}</td>
+                <td>{{ album.release_year }}</td>
+                <td>{{ album.rating }}</td>
+            </tr>
+        {% endfor %}
+    </table>
 {% endblock content %}
