@@ -10,8 +10,7 @@ def create_app():
 
     app.config.from_object(DevelopmentConfig)
 
-    from album_ratings.main.routes import main
-    app.register_blueprint(main)
+    db.init_app(app)
 
     from album_ratings.albums.routes import albums
     app.register_blueprint(albums)
