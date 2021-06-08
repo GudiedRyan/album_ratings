@@ -8,6 +8,7 @@
                 <td>Artist</td>
                 <td>Release Year</td>
                 <td>Rating</td>
+                <td>Options</td>
             </tr>
         </thead>
         {% for album in albums %}
@@ -15,7 +16,8 @@
                 <td>{{ album.name }}</td>
                 <td>{{ album.artist }}</td>
                 <td>{{ album.release_year }}</td>
-                <td>{{ album.rating }}</td>
+                <td>{{ album.rating }}/5</td>
+                <td><a href="{{ url_for('albums.update', album_id=album.id) }}">Edit</a><a href="{{ url_for('albums.delete', album_id=album.id) }}">Delete</a></td>
             </tr>
         {% endfor %}
     </table>
