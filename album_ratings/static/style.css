@@ -1,8 +1,54 @@
 table tr td {
     border: 1px solid black
+    
+}
+
+td {
+    text-align: center;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+thead td {
+    font-weight: bold;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 td a {
-    border: 1px solid white;
-    padding: 2px;
+    border: 1px solid lightgrey;
+    padding: 10px;
+}
+
+.chunk {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+
+.site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+}
+  
+.site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+}
+  
+.site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+}
+
+.chunk h1 {
+    text-align: center;
 }
