@@ -17,3 +17,8 @@ Changelog:
  - Removed the 'main' blueprint as it was better served as part of the 'albums' blueprint
  - Added update and delete methods
  - Added some style to the links to edit/delete
+
+6/9/21 
+ - Added more CSS styling
+ - Updated configurations
+ - Added testing
