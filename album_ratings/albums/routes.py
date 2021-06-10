@@ -5,10 +5,14 @@ from album_ratings import db
 
 albums = Blueprint('albums', __name__)
 
+# Homepage reads the db and lists the contents
+
 @albums.route('/')
 def home():
     albums = AlbumModel.query.all()
     return render_template('home.html', title='home', albums=albums)
+
+# Creates a new album and adds it to the db if it is valid
 
 @albums.route('/create', methods=['GET', 'POST'])
 def create():
@@ -25,6 +29,8 @@ def create():
         flash('Album added!', 'success')
         return redirect(url_for('albums.home'))
     return render_template('album.html', title='Add Album', form=form, legend="Add a new Album")
+
+# Retrieves an album and allows user to update the information
 
 @albums.route('/update/<int:album_id>', methods = ['GET', 'POST'])
 def update(album_id):
@@ -45,6 +51,7 @@ def update(album_id):
         form.rating.data = album.rating
     return render_template('album.html', title="Edit Album Info", form=form, legend='Update Album Info')
 
+# Retrieves an album and deletes it from the db
 
 @albums.route('/delete/<album_id>', methods=['GET','POST'])
 def delete(album_id):
