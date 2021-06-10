@@ -1,3 +1,5 @@
+/* Table CSS */
+
 table tr td {
     border: 1px solid black
     
@@ -19,7 +21,7 @@ td a {
     border: 1px solid lightgrey;
     padding: 10px;
 }
-
+/* Display */
 .chunk {
     display: flex;
     flex-direction: column;
